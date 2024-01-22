@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let n = +prompt("Nhập số lượng sinh viên");
+      let arrStudent = [];
+
+      for (let i=1; i<=n; i++) {
+        let id = +prompt(`Nhập id sinh viên thứ ${i}`);
+        let name = prompt(`Nhập tên của sinh viên thứ ${i}`);
+        let student = new Student(id, name);
+        arrStudent.push(student);
+      }
+
+      function Student(id, name) {
+        this.id = id;
+        this.name = name;   
+      }
+
+      console.log("Thông tin sinh viên", arrStudent);
+    </script>
+  </body>
+</html>

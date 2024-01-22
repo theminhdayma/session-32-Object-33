@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let person = {
+      //       //key : value
+      //       name: "Thế Minh",
+      //       age: 18,
+      //       school: "PTIT",
+      //       appearance: "deptrai",
+      //       status: "Độc thân",
+
+      //       // methods (Phương thức)
+      //       eat: function () {
+      //           console.log("Anh ăn mì tôm suốt ngày....!!!!");
+      //       },
+      //       flirt: function(){
+      //           console.log("Gà yêu Tất");
+      //       },
+      //   };
+
+      // let NamSon = {
+      //     name: "Nguyễn Nam Sơn",
+      //     yearOfBirth: 2008,
+      //     job: "steamer",
+      //     status: "yêu đưn phương",
+      //     appearance: "Ngu",
+
+      //     eat: function(){
+      //         console.log("Ăn đb ăn cứt");
+      //     },
+      //     flirt: function(){
+      //         console.log("Nhà anh đầy tiền");
+      //     },
+      //     walk: function(){
+      //         console.log("Đi bằng 4 chi");
+      //     },
+      // }
+
+      // let  student1 = {
+      //     name: "Thế Minh",
+      //     age: 18,
+      //     status: "độc thân",
+      // };
+
+      // let  student2 = {
+      //     name: "Nam Sơn",
+      //     age: 19,
+      //     status: "đơn phương",
+      // };
+
+      // let  student3 = {
+      //     name: "Lê Diên Tiến",
+      //     age: 18,
+      //     status: "đang tìm hiểu",
+      // };
+
+      // Constructor function
+
+      //   function Student(name, age, status) {
+      //     this.name = name;
+      //     this.age = age;
+      //     this.status = status;
+      //     this.introduce = function(){
+      //         console.log(this);
+      //         // console.log(`Hello, my name is ${this.name}`);
+      //     }
+      //   }
+
+      //   let student1 = new Student("Thế Minh", 18, "Độc Thân");
+      //   let student2 = new Student("Nam Sơn", 19, "Đơn phương");
+      //   let student3 = new Student("Lê Diên Tiến", 18, "Đang tìm hiểu");
+
+      //   // . (dot notation)
+      //   // Truy xuất vào phương thức và thuộc tính của 1 đối tượng
+
+      //   console.log("St1", student1);
+      //   console.log("St2", student2);
+      //   console.log("St3", student3);
+
+      //   student1.introduce();
+      //   student2.introduce();
+      //   student3.introduce();
+
+      //   class Person {
+      //     constructor(name, age) {
+      //       this.name = name;
+      //       this.age = age;
+      //     }
+      //     sayHello() {
+      //       console.log("Hello everyone");
+      //     }
+      //   }
+
+      //   let person = new Person("Nam Sơn", 19);
+
+      //   console.log(person);
+
+      //   class Student {
+      //     constructor(name, point) {
+      //       this.name = name;
+      //       this.point = point;
+      //     }
+      //     speak() {
+      //       console.log(`I'm ${this.name}, Tôi là sinh viên PTIT`);
+      //     }
+      //   }
+
+      //   let str = new Student("Thế Minh", 18);
+      //   console.log(str);
+      //   str.speak();
+
+      //   let person = {
+      //     //key : value
+      //     name: "Thế Minh",
+      //     age: 18,
+      //     school: "PTIT",
+      //     appearance: "deptrai",
+      //     status: "Độc thân",
+
+      //     // methods (Phương thức)
+      //     eat: function () {
+      //       console.log("Anh ăn mì tôm suốt ngày....!!!!");
+      //     },
+      //     flirt: function () {
+      //       console.log("Gà yêu Tất");
+      //     },
+      //   };
+
+      //   // dot notation (.)
+
+      //   person.height = 1.81;
+      //   person.weight = 60;
+
+      // //   console.log("Đối tượng person sau khi được thêm height và weight", person);
+
+      //   // READ
+      //   //read one
+      // //   console.log(`Xin chào ${person.name} bạn có vợ chưa ?`);
+      // //   console.log(`${person["name"]} đã ${person["age"]} tuổi rồi đấy !!!!`);
+
+      //   //read all
+      // //   for(let key in person){
+      // //     console.log(key);
+      // //     console.log(person[key]);
+      // //   }
+
+      //   // Update
+      //   person.name = "Thế Minh deptrai";
+      //   console.log(person);
+
+      //   // Delete
+      // delete person.status
+      // console.log(person);
+
+      class Student {
+        constructor(id, name) {
+          this.id = id;
+          this.name = name;
+        }
+      }
+
+      const students = [
+        new Student(1, "Khánh Huyền"),
+        new Student(2, "Nam Sơn"),
+      ];
+
+      console.log("Danh sách sinh viên: ", students);
+
+      // C - R - U - D Object Array
+    </script>
+  </body>
+</html>

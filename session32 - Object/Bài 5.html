@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let book = [
+        { author: "Thế Minh", name: "Những ngôi sao xa xôi" },
+        { author: "Ronaldo", name: "Không ngừng cố gắng" },
+        { author: "Messi", name: "Tài năng bẩm sinh" },
+      ];
+
+      let auth = prompt("Nhập tên tác giả");
+      let found = false;
+      for (let i = 0; i < book.length; i++) {
+        if (book[i].author === auth) {
+          console.log(book[i]);
+          found = true;
+          break;
+        }
+      }
+      
+      if (!found) {
+        console.log("Không tìm thấy sách");
+      }
+    </script>
+  </body>
+</html>

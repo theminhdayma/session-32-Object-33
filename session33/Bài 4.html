@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var book = {
+        title: "Ngôn tình",
+        author: "Thế Minh",
+        publishedYear: 2005,
+      };
+      console.log("Thông tin sách: ", book);
+      console.log("---------------------------------");
+
+      function Book(title, author, publishedYear) {
+        this.title = title;
+        this.author = author;
+        this.publishedYear = publishedYear;
+      }
+      var library = {
+        books: [],
+        addBook: function (book) {
+          this.books.push(book);
+        },
+        showAllBooks: function () {
+          for (var i = 0; i < this.books.length; i++) {
+            console.log(
+              `Thông tin sách thứ ${i + 1} trong thư viện là:`,
+              this.books[i]
+            );
+          }
+        },
+      };
+      
+      library.addBook(book); // Thêm sách vào thư viện
+      // Tạo các đối tượng sách và thêm vào thư viện
+      var book1 = new Book("Truyện tranh", "Tomiyasu", 1990);
+      var book2 = new Book("Tiểu thuyết", "Lý Thanh Tâm", 2017);
+      library.addBook(book1);
+      library.addBook(book2);
+      
+      library.showAllBooks(); // Hiển thị thông tin tất cả sách trong thư viện
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        id: 1,
+        name: "Thế Minh", 
+        phone: "0364577211",
+        address: "Hà Nội",
+      }
+      console.log("Thông tin khi chưa chỉnh sửa: ", person);
+      delete person.address;
+      // thêm mới tính năng email
+      person.email = "theminh2005z@gmail.com",
+      console.log("Thông tin sau khi chỉnh sửa", person);
+    </script>
+  </body>
+</html>

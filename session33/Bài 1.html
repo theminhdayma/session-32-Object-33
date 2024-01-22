@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = {
+            name: "Thế Minh",
+            age: 18,
+            address: "Hà Nội",
+        };
+
+        console.log("Thông tin của người khi chưa chỉnh sửa: ");
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.address);
+
+        delete person.age; // Xóa thuộc tính tuổi
+        person.email = "theminh2005z@gamel.com"; // thêm thuộc tính email
+        console.log("Thông tin sau khi chỉnh sửa : ");
+        console.log(person);
+    </script>
+</body>
+</html>

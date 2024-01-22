@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Book(title, author, publishedYear) {
+        this.title = title;
+        this.author = author;
+        this.publishedYear = publishedYear;
+        this.isAvailable = true;
+        this.borrow = function () {
+          if (this.isAvailable) {
+            this.isAvailable = false;
+            console.log("Mượn sách thành công");
+          } else {
+            console.log("Sách không có sẵn để mượn");
+          }
+        };
+        this.returnBook = function () {
+          if (!this.isAvailable) {
+            this.isAvailable = true;
+            console.log("Trả sách thành công");
+          } else {
+            console.log("Sách đã có sẵn");
+          }
+        };
+      }
+
+      function library() {
+        const books = [];
+        return {
+          addBook: function (book) {
+            // thêm sách vào thư viện
+            books.push(book);
+          },
+
+          // Hiển thị thông tin tất cả sách trong thư viện
+          showAllBooks: function () {
+            for (let i = 0; i < books.length; i++) {
+              console.log(`Thông tin sách thứ ${i + 1} trong thư viện:`);
+              console.log("Tiêu đề:", books[i].title);
+              console.log("Tác giả:", books[i].author);
+              console.log("Năm sáng tác:", books[i].publishedYear);
+              console.log(
+                "Availability:",
+                books[i].isAvailable ? "Có sẵn" : "Không có sẵn"
+              );
+              console.log("---------------------");
+            }
+          },
+
+          // Kiểm tra trạng thái của một cuốn sách
+          isBookAvailable: function (bookName) {
+            for (let i = 0; i < books.length; i++) {
+              if (books[i].title === bookName) {
+                return books[i].isAvailable;
+              }
+            }
+            return false;
+          },
+        };
+      }
+
+      const myLibrary = library();
+
+      // Tạo các đối tượng sách và thêm vào thư viện
+      const book1 = new Book("Ngôn tình", "Thế Minh", 2005);
+      const book2 = new Book("Truyện tranh", "Tomiyasu", 1990);
+      const book3 = new Book("Tiểu thuyết", "Lý Thanh Tâm", 2017);
+
+      myLibrary.addBook(book1);
+      myLibrary.addBook(book2);
+      myLibrary.addBook(book3);
+
+      // Hiển thị thông tin tất cả sách trong thư viện
+      myLibrary.showAllBooks();
+
+      // Mượn sách
+      book1.borrow();
+
+      // Trả sách
+      book1.returnBook();
+
+      // Kiểm tra trạng thái sách
+      console.log(
+        `Trạng thái của sách ${book1.title}:`,
+        myLibrary.isBookAvailable(book1.title) ? "Có sẵn" : "Không có sẵn"
+      );
+    </script>
+  </body>
+</html>
